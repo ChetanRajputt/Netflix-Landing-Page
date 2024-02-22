@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@500&display=swap');
+
+/* reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* global variable  */
+:root {
+    --bg-color: #000000;
+    --btn-bg-color: #e50914;
+    --primary-f-family: 'Roboto', sans-serif;
+    --secondary-f-family: 'Poppins', sans-serif;
+    --primary-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+/* utility classes */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+/* Header  */
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('/img/bg.jpg')no-repeat center center/cover;
+    background-size: 1750px;
+    opacity: .6;
+    z-index: -1;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+
+/* !!NAVBAR!!  */
+
+.navbar {
+    opacity: 1;
+    justify-content: space-between;
+    height: 50px;
+    padding: 45px 160px;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar .signup #lang {
+    background-color: #171717;
+    color: var(--primary-color);
+    padding: 3px 25px;
+    border-radius: 3px;
+    margin-right: 20px;
+    font-family: var(--secondary-f-family);
+    font-size: 15px;
+}
+
+.btn {
+    background-color: var(--btn-bg-color);
+    border: none;
+    outline: none;
+    font-family: var(--primary-f-family);
+    border-radius: 4px;
+    color: var(--primary-color);
+    transition: background 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:hover {
+    background-color: #db2932;
+}
+
+.navbar .signup .signin {
+    padding: 9px 13px;
+    font-size: 15px;
+}
+
+/* !!BANNER!!  */
+.top-banner {
+    margin-top: 180px;
+    flex-direction: column;
+    font-family: var(--primary-f-family);
+}
+
+.top-banner .banner-text h2 {
+    font-size: 53px;
+}
+
+.top-banner .banner-text p {
+    font-size: 25px;
+    text-align: center;
+    padding-block: 15px;
+}
+
+.top-banner .banner-text .p2 {
+    font-size: 21px;
+}
+
+.login-search {
+    display: flex;
+    max-width: 1700px;
+    margin: 8px 25%;
+}
+
+.login-search input {
+    font-family: var(--secondary-f-family);
+    width: 360px;
+    padding: 0 11px;
+    font-size: 16px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.login-search input::placeholder {
+    color: var(--primary-color);
+}
+
+.login-search .login {
+    padding: 13px 30px;
+    font-size: 25px;
+    border-radius: 6px;
+}
+
+/* !!SECTION MAIN!!  */
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85vh;
+    padding: 0 155px;
+}
+
+.container .banner {
+    margin-left: 50px;
+}
+
+.container .left {
+    margin-left: 0px;
+}
+
+.container .banner img {
+    width: 90%;
+}
+
+.container .content {
+    width: 50%;
+}
+
+.container .content h3 {
+    font-family: var(--primary-f-family);
+    font-size: 53px;
+    color: var(--primary-color);
+}
+
+.container .content p {
+    font-family: var(--secondary-f-family);
+    padding: 20px 0;
+    font-family: var(--primary-f-family);
+    font-size: 22px;
+}
+
+
+/* !!FAQ'S!!  */
+
+
+.faq {
+    width: 100%;
+    height: 150vh;
+    margin-top: 60px;
+}
+
+.faq h3 {
+    font-family: var(--primary-f-family);
+    font-size: 50px;
+    text-align: center;
+}
+
+.faq .according {
+    max-width: 1010px;
+    margin: 8px auto;
+}
+
+.faq .questions,
+.answer {
+    background-color: #2e2d2d;
+    padding: 25px;
+    margin-bottom: 10px;
+}
+
+.faq .questions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.faq .questions:hover {
+    background-color: #414141;
+}
+
+.faq .questions i {
+    font-size: 35px;
+}
+
+.faq .questions h5 {
+    font-size: 25px;
+    font-family: var(--secondary-f-family);
+}
+
+.faq .answer {
+    display: none;
+}
+
+.faq .active {
+    display: block;
+}
+
+
+.faq .answer p {
+    font-size: 21px;
+    font-family: var(--secondary-f-family);
+}
+
+.member {
+    margin-block: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.member h5 {
+    font-family: var(--secondary-f-family);
+    font-size: 18px;
+    text-align: center;
+    padding-block: 12px;
+}
+
+
+/* !! FOOTER !!  */
+
+.footer {
+    background-color: red;
+    height: 450px;
+    display: none;
+}
+
+.links {
+    justify-content: space-between;
+}
